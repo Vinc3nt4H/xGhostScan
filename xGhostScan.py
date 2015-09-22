@@ -46,7 +46,7 @@ def scan_fast(xpath):
 
     return ret, result 
 
-C2C_SRV = "icloud-analysis.com|icloud-diagnostics.com"
+C2C_SRV = "icloud-analysis.com|icloud-diagnostics.com|crash-analytics.com"
 def scan_deep(xpath):
     ret = False; result = []
 
@@ -84,7 +84,7 @@ if __name__ == '__main__':
     from optparse import OptionParser
     parser = OptionParser()
     parser.add_option("-t", "--type", dest="type", help="scan type: fast | deep, \n\tdefault is fast")
-    parser.add_option("-p", "--path", dest="path", help="Xcode path: like /Applications/Xcode.app/, \n\tdefault is /Applications/Xcode.app/")
+    parser.add_option("-p", "--path", dest="path", help="Xcode|Unity path: like /Applications/Xcode.app/, \n\tdefault is /Applications/Xcode.app/")
     (cmdln_options, args) = parser.parse_args()
     cr()
     stype = cmdln_options.type
